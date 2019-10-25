@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="In_App_Purchases" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2r-R1-F4B">
+                                <rect key="frame" x="107" y="438" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="pgX-q2-RBu"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Get Subscription"/>
+                                <connections>
+                                    <segue destination="7et-M7-n5V" kind="presentation" modalPresentationStyle="fullScreen" id="gs6-eD-IQ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d2r-R1-F4B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Fa-Gd-xRB"/>
+                            <constraint firstItem="d2r-R1-F4B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kr2-KD-tQl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="-3"/>
+        </scene>
+        <!--Subscription View Controller-->
+        <scene sceneID="K30-DB-g5X">
+            <objects>
+                <viewController id="7et-M7-n5V" customClass="SubscriptionViewController" customModule="In_App_Purchases" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Zu-uM-LJj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="L0G-Ya-GEz">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZg-ib-tFm">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Restore"/>
+                                        <connections>
+                                            <action selector="restoreButtonAction:" destination="7et-M7-n5V" eventType="touchUpInside" id="GGr-s4-FZO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WS-IO-v86">
+                                        <rect key="frame" x="237" y="0.0" width="137" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="7et-M7-n5V" eventType="touchUpInside" id="PAT-IX-omB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ep-3c-obs">
+                                <rect key="frame" x="107" y="185" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qzL-Zz-0Y5"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Subscribe Monthly Now"/>
+                                <connections>
+                                    <action selector="subscribeMonthlyButtonAction:" destination="7et-M7-n5V" eventType="touchUpInside" id="htq-Ha-yeG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start your free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCi-Dy-AlK">
+                                <rect key="frame" x="50" y="104" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9XH-ML-gho">
+                                <rect key="frame" x="20" y="335.5" width="374" height="516.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="dark_blue"/>
+                                <string key="text">After the 2 weeks free trial this subscription automatically renews for $3.99 per month unless it is cancelled at least 24 hours before the end of the trial period. Your Apple ID will be charged for renewal within 24 hours before the end of the trial period. You can manage and cancel your subscriptions by going to your account settings on the App Store.
+
+For more information, see our Terms of Service and Privacy Policy</string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then $4 per month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ8-eo-Tt3">
+                                <rect key="frame" x="50" y="154.5" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-S3-iAy">
+                                <rect key="frame" x="107" y="275.5" width="200" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ibO-dd-k7I"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Subscribe Yearly Now"/>
+                                <connections>
+                                    <action selector="subscribeYearlyButtonAction:" destination="7et-M7-n5V" eventType="touchUpInside" id="ZMx-42-Loi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then $20 per year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQp-67-r3I">
+                                <rect key="frame" x="50" y="245" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AEh-S3-iAy" firstAttribute="centerX" secondItem="ytC-G2-Qv8" secondAttribute="centerX" id="0Un-Z4-Pb5"/>
+                            <constraint firstItem="L0G-Ya-GEz" firstAttribute="top" secondItem="ytC-G2-Qv8" secondAttribute="top" id="0ov-zf-QBS"/>
+                            <constraint firstItem="9XH-ML-gho" firstAttribute="leading" secondItem="ytC-G2-Qv8" secondAttribute="leading" constant="20" id="36L-wD-Kln"/>
+                            <constraint firstItem="iQ8-eo-Tt3" firstAttribute="top" secondItem="GCi-Dy-AlK" secondAttribute="bottom" constant="30" id="9xd-6s-s1e"/>
+                            <constraint firstItem="GCi-Dy-AlK" firstAttribute="top" secondItem="L0G-Ya-GEz" secondAttribute="bottom" constant="30" id="BFV-HJ-Lxc"/>
+                            <constraint firstItem="8Ep-3c-obs" firstAttribute="centerX" secondItem="ytC-G2-Qv8" secondAttribute="centerX" id="CIy-am-Q6q"/>
+                            <constraint firstItem="GCi-Dy-AlK" firstAttribute="centerX" secondItem="ytC-G2-Qv8" secondAttribute="centerX" id="Gbn-Kf-51o"/>
+                            <constraint firstItem="8Ep-3c-obs" firstAttribute="top" secondItem="iQ8-eo-Tt3" secondAttribute="bottom" constant="10" id="JUe-Uk-zIp"/>
+                            <constraint firstItem="GCi-Dy-AlK" firstAttribute="leading" secondItem="ytC-G2-Qv8" secondAttribute="leading" constant="50" id="Kmw-A0-re4"/>
+                            <constraint firstItem="9XH-ML-gho" firstAttribute="top" secondItem="AEh-S3-iAy" secondAttribute="bottom" constant="30" id="L9V-U3-Qpk"/>
+                            <constraint firstItem="xQp-67-r3I" firstAttribute="leading" secondItem="ytC-G2-Qv8" secondAttribute="leading" constant="50" id="MFu-Fx-ZrL"/>
+                            <constraint firstItem="iQ8-eo-Tt3" firstAttribute="centerX" secondItem="ytC-G2-Qv8" secondAttribute="centerX" id="XzF-y9-e2x"/>
+                            <constraint firstItem="xQp-67-r3I" firstAttribute="top" secondItem="8Ep-3c-obs" secondAttribute="bottom" constant="30" id="gQm-VA-ms2"/>
+                            <constraint firstItem="ytC-G2-Qv8" firstAttribute="trailing" secondItem="L0G-Ya-GEz" secondAttribute="trailing" constant="20" id="jdA-M6-hqS"/>
+                            <constraint firstItem="ytC-G2-Qv8" firstAttribute="trailing" secondItem="9XH-ML-gho" secondAttribute="trailing" constant="20" id="m4d-CE-ttV"/>
+                            <constraint firstItem="xQp-67-r3I" firstAttribute="centerX" secondItem="ytC-G2-Qv8" secondAttribute="centerX" id="o7C-vg-hTA"/>
+                            <constraint firstItem="iQ8-eo-Tt3" firstAttribute="leading" secondItem="ytC-G2-Qv8" secondAttribute="leading" constant="50" id="uGE-iT-xUq"/>
+                            <constraint firstItem="ytC-G2-Qv8" firstAttribute="bottom" secondItem="9XH-ML-gho" secondAttribute="bottom" constant="10" id="x6k-tj-yLB"/>
+                            <constraint firstItem="L0G-Ya-GEz" firstAttribute="leading" secondItem="ytC-G2-Qv8" secondAttribute="leading" constant="20" id="xAT-C5-9dH"/>
+                            <constraint firstItem="AEh-S3-iAy" firstAttribute="top" secondItem="xQp-67-r3I" secondAttribute="bottom" constant="10" id="zUg-lP-OPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ytC-G2-Qv8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uIY-2E-Fcp"/>
+                    <connections>
+                        <outlet property="monthPriceLabel" destination="iQ8-eo-Tt3" id="Z7x-rE-57s"/>
+                        <outlet property="yearPriceLabel" destination="xQp-67-r3I" id="69j-Ds-lrX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fts-yI-iu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.6521739130435" y="-4.0178571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="dark_blue">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
